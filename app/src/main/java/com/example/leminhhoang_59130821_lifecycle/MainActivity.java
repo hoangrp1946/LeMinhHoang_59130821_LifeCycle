@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 
 public class MainActivity extends AppCompatActivity {
     String tag,mgs;
-    TextView texTime;
+    TextView textTime;
     private static final String TIME_FORMAT_12 = "hh:mm:ss";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,16 +35,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onResume() {
         super.onResume();
         Log.d(tag = "LifeCycle", mgs = " onResume");
-        texTime = (TextView) findViewById(R.id.time);
+        textTime = (TextView) findViewById(R.id.time);
         DateFormat dateFormatter = new SimpleDateFormat("hh:mm:ss");
         Date today = new Date();
         String s = dateFormatter.format(today);
-        texTime.setText(s);
+        textTime.setText(s);
         Toast.makeText(MainActivity.this, "LifeCycle_Le Minh Hoang_ 59130821", Toast.LENGTH_SHORT).show();
 
 
