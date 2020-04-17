@@ -1,0 +1,9 @@
+Câu 4:
+onPause > onStop > onDestroy > onCreate > onStart > onResume
+(bởi vì khi bấm nút Back thì onDestroy sẽ được kích hoạt và kết thúc vòng đời hoạt động, sau đó mở lại thì sẽ chạy onCreate onStart và onResume lần lượt) 
+Câu 5:
+onPause > onStop > onRestart > onStart > onResume
+(bởi vì bấm nút Home thì ứng dụng bị che bởi nền hoặc ứng dụng khác, khi gọi lại ứng dụng không cần khởi tạo lại nên có thể dùng tiếp onRestart và onStart)
+Câu 6:
+Cần thực hiện phương thức onPause. Vì khi rơi vào onStop mà muốn trở lại ứng dụng thì phải onRestart lại ứng dụng, còn khi onPause thì ứng dụng chỉ ẩn dưới nền 
+thường để ghi thay đổi chưa lưu và quay trở về ứng dụng thì onResume được gọi để hiển thị.
